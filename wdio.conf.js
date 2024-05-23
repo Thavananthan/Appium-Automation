@@ -24,7 +24,7 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/android-native.spec.js'
+        './test/specs/android/delete*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -59,7 +59,9 @@ exports.config = {
         'appium:deviceName': 'Pixel 6',
         'appium:platformVersion': '14.0',
         'appium:automationName': 'UiAutomator2',
-        'appium:app':'app/android/ApiDemos-debug.apk'
+        //'appium:app':'app/android/ApiDemos-debug.apk'
+        'appium:app':'app/android/ColorNote+Notepad.apk',
+        'appium:autoGrantPermissions':true
     }],
 
     //

@@ -56,16 +56,24 @@ describe('Android native feature tests', () => {
 
     it.only('working with a date picker', async () => {
         // access the date picker
+        await driver.startActivity("io.appium.android.apis","io.appium.android.apis.view.DateWidgets1")
 
         //get current date
-
+        const date = await $('//*[@resource-id="io.appium.android.apis:id/dateDisplay"]');
+        const currentDate = await date.getText();
         //clcik on change the date button
-
+        // const ls = await $('//*[@resource-id="io.appium.android.apis:id/pickDate"]');
+        await $('~change the date').click();
         //scroll right to next month
-
+        await $('android=new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().scrollForward()');
         //clcik on ok button
+         await $('//*[@text="20"]').click();
 
+         //click on ok button
+         await $('//*[@resource-id="android:id/button1"]').click();
         //verify the updated date
+
+        await expect(await date.getText()).not.toEqual(currentDate);
     })
 
 });
