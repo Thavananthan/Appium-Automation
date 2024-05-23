@@ -24,7 +24,7 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/android/delete*.js'
+        './test/specs/android/delete-note-screen.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
