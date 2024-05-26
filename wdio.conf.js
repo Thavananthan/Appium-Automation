@@ -24,7 +24,7 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/android/delete-note-screen.spec.js'
+        './test/specs/**/ios*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -52,17 +52,32 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        //browserName: 'Chrome',
-        'appium:deviceName': 'Pixel 6',
-        'appium:platformVersion': '14.0',
-        'appium:automationName': 'UiAutomator2',
-        //'appium:app':'app/android/ApiDemos-debug.apk'
-        'appium:app':'app/android/ColorNote+Notepad.apk',
-        'appium:autoGrantPermissions':true
-    }],
+    capabilities: [
+       // {
+    //     // capabilities for local Appium web tests on an Android Emulator
+    //     platformName: 'Android',
+    //     //browserName: 'Chrome',
+    //     'appium:deviceName': 'Pixel 6',
+    //     'appium:platformVersion': '14.0',
+    //     'appium:automationName': 'UiAutomator2',
+    //     //'appium:app':'app/android/ApiDemos-debug.apk'
+    //     'appium:app':'app/android/ColorNote+Notepad.apk',
+    //     'appium:autoGrantPermissions':true
+    // }
+
+    // IOS
+ 
+        {
+            // capabilities for local Appium web tests on an Android Emulator
+         platformName: 'ios',
+        'appium:deviceName': 'iPhone 11',
+        'appium:platformVersion': '17.2',
+        'appium:automationName': 'XCUITest',
+        'appium:app':'app/ios/UIKitCatalog.app',
+        }
+    
+
+],
 
     //
     // ===================
