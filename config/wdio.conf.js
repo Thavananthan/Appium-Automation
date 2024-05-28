@@ -1,13 +1,5 @@
 
 exports.config = {
-    //
-    // ====================
-    // Runner Configuration
-    // ====================
-    // WebdriverIO supports running e2e tests as well as unit and component tests.
-    runner: 'local',
-    port: 4723,
-    //
     // ==================
     // Specify Test Files
     // ==================
@@ -22,10 +14,6 @@ exports.config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: [
-        // ToDo: define location for spec files here
-        './test/specs/ios/ios-todo-item-screen.spec.js'
-    ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -52,33 +40,6 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [
-       // {
-    //     // capabilities for local Appium web tests on an Android Emulator
-    //     platformName: 'Android',
-    //     //browserName: 'Chrome',
-    //     'appium:deviceName': 'Pixel 6',
-    //     'appium:platformVersion': '14.0',
-    //     'appium:automationName': 'UiAutomator2',
-    //     //'appium:app':'app/android/ApiDemos-debug.apk'
-    //     'appium:app':'app/android/ColorNote+Notepad.apk',
-    //     'appium:autoGrantPermissions':true
-    // }
-
-    // IOS
- 
-        {
-            // capabilities for local Appium web tests on an Android Emulator
-         platformName: 'ios',
-        'appium:deviceName': 'iPhone 11',
-        'appium:platformVersion': '17.2',
-        'appium:automationName': 'XCUITest',
-        'appium:app':'app/ios/MVCTodo.app',
-        }
-    
-
-],
-
     //
     // ===================
     // Test Configurations
