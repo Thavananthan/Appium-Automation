@@ -12,7 +12,7 @@ config.port = 4723;
 // Specs
 // ============
 config.specs = [
-  '../test/specs/android/add-note-screen*.js'
+  '../test/specs/android/webview.spec.js'
 ];
 
 //
