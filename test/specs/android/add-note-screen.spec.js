@@ -15,6 +15,7 @@ describe('Add Notes', () => {
     // add note title
     await AddNoteScreen.noteHeading.addValue("Fav Anime List");
 
+     await driver.takeScreenshot();
     // add note body
     await AddNoteScreen.noteBody.addValue("Naruto\nOnePiece\nAOT");
 
@@ -24,5 +25,6 @@ describe('Add Notes', () => {
     // assertion
     await expect(AddNoteScreen.editBtn).toBeDisplayed();
     await expect(AddNoteScreen.viewNote).toHaveText("Naruto\nOnePiece\nAOT");
+    await driver.takeScreenshot();
   });
 });
